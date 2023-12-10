@@ -23,6 +23,7 @@ namespace SecurityUsb.View
         private bool isFromStorage;
 
 
+
         public SecurityUsbForm()
         {
             fileService = new FileService();
@@ -43,7 +44,9 @@ namespace SecurityUsb.View
             dgvFile.Columns.Add("File", "File");
             dgvFile.Columns.Add("Created At", "Created At");
             cbFileSizeUnit.SelectedIndex = 0;
-        }
+            btnCopy.Enabled = false;
+            btnEncrypt.Enabled = false;
+        }   
 
         private void BrownseFile_Click(object sender, EventArgs e)
         {
@@ -54,6 +57,8 @@ namespace SecurityUsb.View
                 DialogResult dialogResult = openFileDialog.ShowDialog();
                 if (dialogResult.Equals(DialogResult.OK))
                 {
+                    btnCopy.Enabled = true;
+                    btnEncrypt.Enabled = false;
                     String path = openFileDialog.FileName;
                     ConfigFileInfo(path, cbFileSizeUnit.SelectedIndex, false);
                 }
@@ -84,6 +89,8 @@ namespace SecurityUsb.View
         private void dgvFile_MouseClick(object sender, MouseEventArgs e)
         {
             isFromStorage = true;
+            btnEncrypt.Enabled = true;
+            btnCopy.Enabled = false;
             String fileName = dgvFile.SelectedCells[0].Value.ToString()!;
             ConfigFileInfo(Path.Combine(storageService.GetFullName(), fileName), cbFileSizeUnit.SelectedIndex, true);
         }

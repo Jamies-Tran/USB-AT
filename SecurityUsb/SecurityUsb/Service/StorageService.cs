@@ -52,6 +52,7 @@ namespace SecurityUsb.Service
                 String newFile = CombinePath(file.Name);
         
                 File.Copy(fileName, newFile);
+                MessageBox.Show("File has been copied");
             } else
             {
                 MessageBox.Show("File not found");

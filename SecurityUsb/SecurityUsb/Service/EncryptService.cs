@@ -55,8 +55,11 @@ namespace SecurityUsb.Service
                     {
                         cryptoStream.Write(buffer, 0, byteRead);
                     }
-                }    
+                }
+                File.Delete(inputFile);
             }
+
+            MessageBox.Show("File has been encrypted");
         }
 
         public void DecryptFile() 

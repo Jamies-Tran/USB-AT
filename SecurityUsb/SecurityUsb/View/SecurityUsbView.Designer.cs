@@ -30,10 +30,10 @@
         {
             Button btnBrowseFile;
             Button btnBrownseFolder;
-            Button btnCopy;
-            Button btnEncrypt;
             dgvFile = new DataGridView();
             groupBox1 = new GroupBox();
+            btnEncrypt = new Button();
+            btnCopy = new Button();
             cbFileSizeUnit = new ComboBox();
             label5 = new Label();
             label4 = new Label();
@@ -47,8 +47,6 @@
             tvDir = new TreeView();
             btnBrowseFile = new Button();
             btnBrownseFolder = new Button();
-            btnCopy = new Button();
-            btnEncrypt = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvFile).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -74,17 +72,6 @@
             btnBrownseFolder.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBrownseFolder.UseVisualStyleBackColor = true;
             btnBrownseFolder.Click += btnBrownseFolder_Click;
-            // 
-            // btnCopy
-            // 
-            btnCopy.Location = new Point(491, 84);
-            btnCopy.Name = "btnCopy";
-            btnCopy.Size = new Size(149, 23);
-            btnCopy.TabIndex = 11;
-            btnCopy.Text = "Copy";
-            btnCopy.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnCopy.UseVisualStyleBackColor = true;
-            btnCopy.Click += btnCopy_Click;
             // 
             // dgvFile
             // 
@@ -126,6 +113,26 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Configuration";
+            // 
+            // btnEncrypt
+            // 
+            btnEncrypt.Location = new Point(491, 132);
+            btnEncrypt.Name = "btnEncrypt";
+            btnEncrypt.Size = new Size(149, 23);
+            btnEncrypt.TabIndex = 14;
+            btnEncrypt.Text = "Encrypt";
+            btnEncrypt.UseVisualStyleBackColor = true;
+            btnEncrypt.Click += btnEncrypt_Click;
+            // 
+            // btnCopy
+            // 
+            btnCopy.Location = new Point(491, 80);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Size = new Size(149, 23);
+            btnCopy.TabIndex = 13;
+            btnCopy.Text = "Copy";
+            btnCopy.UseVisualStyleBackColor = true;
+            btnCopy.Click += btnCopy_Click;
             // 
             // cbFileSizeUnit
             // 
@@ -231,17 +238,6 @@
             tvDir.TabIndex = 5;
             tvDir.NodeMouseClick += tvDir_NodeMouseClick;
             // 
-            // btnEncrypt
-            // 
-            btnEncrypt.Location = new Point(491, 132);
-            btnEncrypt.Name = "btnEncrypt";
-            btnEncrypt.Size = new Size(149, 23);
-            btnEncrypt.TabIndex = 12;
-            btnEncrypt.Text = "Encrypt";
-            btnEncrypt.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnEncrypt.UseVisualStyleBackColor = true;
-            btnEncrypt.Click += btnEncrypt_Click;
-            // 
             // SecurityUsbForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -275,5 +271,7 @@
         private TreeView tvDir;
         private Label label5;
         private ComboBox cbFileSizeUnit;
+        private Button btnCopy;
+        private Button btnEncrypt;
     }
 }
