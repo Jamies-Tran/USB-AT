@@ -1,0 +1,9 @@
+Tip 1:
+ - Đặt tên biến phải rõ ràng, dễ hiểu, không gây nhầm lẫn 
+
+Tip 2:
+ - Khi có quá nhiều condition trồng lên nhau, nên gán 
+   các condition đó vào các biến với tên mà con người có thể hiểu được để condition statement không bị phức tạp, khó hiểu 
+
+Tip 3:
+ - đối boolean type tránh trường hợp đặt tên theo dạng phủ định của phủ định 
