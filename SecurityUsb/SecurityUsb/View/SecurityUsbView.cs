@@ -46,7 +46,7 @@ namespace SecurityUsb.View
             cbFileSizeUnit.SelectedIndex = 0;
             btnCopy.Enabled = false;
             btnEncrypt.Enabled = false;
-        }   
+        }
 
         private void BrownseFile_Click(object sender, EventArgs e)
         {

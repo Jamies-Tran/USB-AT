@@ -45,6 +45,9 @@
             txtFilePath = new TextBox();
             txtFileName = new TextBox();
             tvDir = new TreeView();
+            btnDecrypt = new Button();
+            label6 = new Label();
+            btnOpen = new Button();
             btnBrowseFile = new Button();
             btnBrownseFolder = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvFile).BeginInit();
@@ -68,7 +71,7 @@
             btnBrownseFolder.Name = "btnBrownseFolder";
             btnBrownseFolder.Size = new Size(149, 23);
             btnBrownseFolder.TabIndex = 8;
-            btnBrownseFolder.Text = "Brownse Folder";
+            btnBrownseFolder.Text = "Brownse Folder(*)";
             btnBrownseFolder.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnBrownseFolder.UseVisualStyleBackColor = true;
             btnBrownseFolder.Click += btnBrownseFolder_Click;
@@ -93,6 +96,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnOpen);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(btnDecrypt);
             groupBox1.Controls.Add(btnEncrypt);
             groupBox1.Controls.Add(btnCopy);
             groupBox1.Controls.Add(cbFileSizeUnit);
@@ -116,7 +122,7 @@
             // 
             // btnEncrypt
             // 
-            btnEncrypt.Location = new Point(491, 132);
+            btnEncrypt.Location = new Point(404, 86);
             btnEncrypt.Name = "btnEncrypt";
             btnEncrypt.Size = new Size(149, 23);
             btnEncrypt.TabIndex = 14;
@@ -126,7 +132,7 @@
             // 
             // btnCopy
             // 
-            btnCopy.Location = new Point(491, 80);
+            btnCopy.Location = new Point(485, 132);
             btnCopy.Name = "btnCopy";
             btnCopy.Size = new Size(149, 23);
             btnCopy.TabIndex = 13;
@@ -238,6 +244,33 @@
             tvDir.TabIndex = 5;
             tvDir.NodeMouseClick += tvDir_NodeMouseClick;
             // 
+            // btnDecrypt
+            // 
+            btnDecrypt.Location = new Point(583, 86);
+            btnDecrypt.Name = "btnDecrypt";
+            btnDecrypt.Size = new Size(149, 23);
+            btnDecrypt.TabIndex = 15;
+            btnDecrypt.Text = "Decrypt(*)";
+            btnDecrypt.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(559, 90);
+            label6.Name = "label6";
+            label6.Size = new Size(18, 15);
+            label6.TabIndex = 16;
+            label6.Text = "or";
+            // 
+            // btnOpen
+            // 
+            btnOpen.Location = new Point(485, 188);
+            btnOpen.Name = "btnOpen";
+            btnOpen.Size = new Size(149, 23);
+            btnOpen.TabIndex = 17;
+            btnOpen.Text = "Open(*)";
+            btnOpen.UseVisualStyleBackColor = true;
+            // 
             // SecurityUsbForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -273,5 +306,8 @@
         private ComboBox cbFileSizeUnit;
         private Button btnCopy;
         private Button btnEncrypt;
+        private Button btnDecrypt;
+        private Button btnOpen;
+        private Label label6;
     }
 }
