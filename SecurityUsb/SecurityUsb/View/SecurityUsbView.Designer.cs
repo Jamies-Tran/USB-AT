@@ -28,53 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Button btnBrowseFile;
-            Button btnBrownseFolder;
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SecurityUsbForm));
             dgvFile = new DataGridView();
-            groupBox1 = new GroupBox();
-            btnEncrypt = new Button();
-            btnCopy = new Button();
-            cbFileSizeUnit = new ComboBox();
-            label5 = new Label();
-            label4 = new Label();
-            txtExtension = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            txtFileSize = new TextBox();
-            txtFilePath = new TextBox();
-            txtFileName = new TextBox();
             tvDir = new TreeView();
-            btnDecrypt = new Button();
-            label6 = new Label();
-            btnOpen = new Button();
-            btnBrowseFile = new Button();
-            btnBrownseFolder = new Button();
+            groupBox1 = new GroupBox();
+            groupBox2 = new GroupBox();
+            dgvUsbAT = new DataGridView();
+            btnCopy = new Button();
+            btnCreate = new Button();
+            btnDelete = new Button();
+            btnSystemBack = new Button();
+            btnStorageBack = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvFile).BeginInit();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvUsbAT).BeginInit();
             SuspendLayout();
-            // 
-            // btnBrowseFile
-            // 
-            btnBrowseFile.Location = new Point(404, 36);
-            btnBrowseFile.Name = "btnBrowseFile";
-            btnBrowseFile.Size = new Size(149, 23);
-            btnBrowseFile.TabIndex = 3;
-            btnBrowseFile.Text = "Brownse File";
-            btnBrowseFile.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBrowseFile.UseVisualStyleBackColor = true;
-            btnBrowseFile.Click += BrownseFile_Click;
-            // 
-            // btnBrownseFolder
-            // 
-            btnBrownseFolder.Location = new Point(583, 36);
-            btnBrownseFolder.Name = "btnBrownseFolder";
-            btnBrownseFolder.Size = new Size(149, 23);
-            btnBrownseFolder.TabIndex = 8;
-            btnBrownseFolder.Text = "Brownse Folder(*)";
-            btnBrownseFolder.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnBrownseFolder.UseVisualStyleBackColor = true;
-            btnBrownseFolder.Click += btnBrownseFolder_Click;
             // 
             // dgvFile
             // 
@@ -83,231 +58,195 @@
             dgvFile.AllowUserToOrderColumns = true;
             dgvFile.AllowUserToResizeColumns = false;
             dgvFile.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = Color.DarkGray;
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dgvFile.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvFile.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvFile.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
+            dgvFile.BackgroundColor = SystemColors.ButtonFace;
             dgvFile.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFile.Location = new Point(262, 284);
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvFile.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvFile.Location = new Point(6, 22);
             dgvFile.Name = "dgvFile";
             dgvFile.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Lime;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvFile.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dgvFile.RowTemplate.DefaultCellStyle.ForeColor = Color.Black;
             dgvFile.RowTemplate.Height = 25;
-            dgvFile.Size = new Size(526, 150);
+            dgvFile.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvFile.Size = new Size(363, 292);
             dgvFile.TabIndex = 1;
-            dgvFile.MouseClick += dgvFile_MouseClick;
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(btnOpen);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(btnDecrypt);
-            groupBox1.Controls.Add(btnEncrypt);
-            groupBox1.Controls.Add(btnCopy);
-            groupBox1.Controls.Add(cbFileSizeUnit);
-            groupBox1.Controls.Add(label5);
-            groupBox1.Controls.Add(btnBrownseFolder);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(btnBrowseFile);
-            groupBox1.Controls.Add(txtExtension);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(txtFileSize);
-            groupBox1.Controls.Add(txtFilePath);
-            groupBox1.Controls.Add(txtFileName);
-            groupBox1.Location = new Point(12, 12);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(776, 266);
-            groupBox1.TabIndex = 4;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Configuration";
-            // 
-            // btnEncrypt
-            // 
-            btnEncrypt.Location = new Point(404, 86);
-            btnEncrypt.Name = "btnEncrypt";
-            btnEncrypt.Size = new Size(149, 23);
-            btnEncrypt.TabIndex = 14;
-            btnEncrypt.Text = "Encrypt";
-            btnEncrypt.UseVisualStyleBackColor = true;
-            btnEncrypt.Click += btnEncrypt_Click;
-            // 
-            // btnCopy
-            // 
-            btnCopy.Location = new Point(485, 132);
-            btnCopy.Name = "btnCopy";
-            btnCopy.Size = new Size(149, 23);
-            btnCopy.TabIndex = 13;
-            btnCopy.Text = "Copy";
-            btnCopy.UseVisualStyleBackColor = true;
-            btnCopy.Click += btnCopy_Click;
-            // 
-            // cbFileSizeUnit
-            // 
-            cbFileSizeUnit.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbFileSizeUnit.FormattingEnabled = true;
-            cbFileSizeUnit.Items.AddRange(new object[] { "BYTE", "KB", "MB", "GB" });
-            cbFileSizeUnit.Location = new Point(230, 133);
-            cbFileSizeUnit.Name = "cbFileSizeUnit";
-            cbFileSizeUnit.Size = new Size(95, 23);
-            cbFileSizeUnit.TabIndex = 10;
-            cbFileSizeUnit.SelectedIndexChanged += cbFileSizeUnit_SelectedIndexChanged;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(559, 40);
-            label5.Name = "label5";
-            label5.Size = new Size(18, 15);
-            label5.TabIndex = 9;
-            label5.Text = "or";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(57, 170);
-            label4.Name = "label4";
-            label4.Size = new Size(79, 15);
-            label4.TabIndex = 7;
-            label4.Text = "File Extension";
-            // 
-            // txtExtension
-            // 
-            txtExtension.BorderStyle = BorderStyle.FixedSingle;
-            txtExtension.Location = new Point(57, 188);
-            txtExtension.Name = "txtExtension";
-            txtExtension.ReadOnly = true;
-            txtExtension.Size = new Size(167, 23);
-            txtExtension.TabIndex = 6;
-            txtExtension.TextAlign = HorizontalAlignment.Center;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(57, 116);
-            label3.Name = "label3";
-            label3.Size = new Size(48, 15);
-            label3.TabIndex = 5;
-            label3.Text = "File Size";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(57, 68);
-            label2.Name = "label2";
-            label2.Size = new Size(52, 15);
-            label2.TabIndex = 4;
-            label2.Text = "File Path";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(57, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 15);
-            label1.TabIndex = 3;
-            label1.Text = "File Name";
-            // 
-            // txtFileSize
-            // 
-            txtFileSize.BorderStyle = BorderStyle.FixedSingle;
-            txtFileSize.Location = new Point(57, 134);
-            txtFileSize.Name = "txtFileSize";
-            txtFileSize.ReadOnly = true;
-            txtFileSize.Size = new Size(167, 23);
-            txtFileSize.TabIndex = 2;
-            txtFileSize.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtFilePath
-            // 
-            txtFilePath.BorderStyle = BorderStyle.FixedSingle;
-            txtFilePath.Location = new Point(57, 86);
-            txtFilePath.Name = "txtFilePath";
-            txtFilePath.ReadOnly = true;
-            txtFilePath.Size = new Size(167, 23);
-            txtFilePath.TabIndex = 1;
-            txtFilePath.TextAlign = HorizontalAlignment.Center;
-            // 
-            // txtFileName
-            // 
-            txtFileName.BorderStyle = BorderStyle.FixedSingle;
-            txtFileName.Location = new Point(57, 38);
-            txtFileName.Name = "txtFileName";
-            txtFileName.ReadOnly = true;
-            txtFileName.Size = new Size(167, 23);
-            txtFileName.TabIndex = 0;
-            txtFileName.TextAlign = HorizontalAlignment.Center;
+            dgvFile.CellClick += dgvFile_CellClick;
+            dgvFile.CellContentDoubleClick += dgvFile_CellContentDoubleClick;
             // 
             // tvDir
             // 
-            tvDir.Location = new Point(12, 284);
+            tvDir.Location = new Point(12, 68);
             tvDir.Name = "tvDir";
-            tvDir.Size = new Size(224, 150);
+            tvDir.Size = new Size(159, 305);
             tvDir.TabIndex = 5;
             tvDir.NodeMouseClick += tvDir_NodeMouseClick;
             // 
-            // btnDecrypt
+            // groupBox1
             // 
-            btnDecrypt.Location = new Point(583, 86);
-            btnDecrypt.Name = "btnDecrypt";
-            btnDecrypt.Size = new Size(149, 23);
-            btnDecrypt.TabIndex = 15;
-            btnDecrypt.Text = "Decrypt(*)";
-            btnDecrypt.UseVisualStyleBackColor = true;
+            groupBox1.Controls.Add(dgvFile);
+            groupBox1.Location = new Point(177, 46);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(376, 327);
+            groupBox1.TabIndex = 6;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "File System";
             // 
-            // label6
+            // groupBox2
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(559, 90);
-            label6.Name = "label6";
-            label6.Size = new Size(18, 15);
-            label6.TabIndex = 16;
-            label6.Text = "or";
+            groupBox2.Controls.Add(dgvUsbAT);
+            groupBox2.Location = new Point(664, 46);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(377, 327);
+            groupBox2.TabIndex = 7;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "USB AT";
             // 
-            // btnOpen
+            // dgvUsbAT
             // 
-            btnOpen.Location = new Point(485, 188);
-            btnOpen.Name = "btnOpen";
-            btnOpen.Size = new Size(149, 23);
-            btnOpen.TabIndex = 17;
-            btnOpen.Text = "Open(*)";
-            btnOpen.UseVisualStyleBackColor = true;
+            dgvUsbAT.AllowUserToAddRows = false;
+            dgvUsbAT.AllowUserToDeleteRows = false;
+            dgvUsbAT.AllowUserToOrderColumns = true;
+            dgvUsbAT.AllowUserToResizeColumns = false;
+            dgvUsbAT.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.BackColor = Color.DarkGray;
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            dgvUsbAT.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dgvUsbAT.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvUsbAT.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllHeaders;
+            dgvUsbAT.BackgroundColor = SystemColors.ButtonFace;
+            dgvUsbAT.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvUsbAT.DefaultCellStyle = dataGridViewCellStyle5;
+            dgvUsbAT.Location = new Point(6, 22);
+            dgvUsbAT.Name = "dgvUsbAT";
+            dgvUsbAT.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = Color.Lime;
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvUsbAT.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dgvUsbAT.RowTemplate.DefaultCellStyle.ForeColor = Color.Black;
+            dgvUsbAT.RowTemplate.Height = 25;
+            dgvUsbAT.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvUsbAT.Size = new Size(363, 292);
+            dgvUsbAT.TabIndex = 2;
+            dgvUsbAT.CellClick += dgvUsbAT_CellClick;
+            dgvUsbAT.CellContentDoubleClick += dgvUsbAT_CellContentDoubleClick;
+            // 
+            // btnCopy
+            // 
+            btnCopy.BackColor = Color.FromArgb(255, 255, 128);
+            btnCopy.Enabled = false;
+            btnCopy.Image = (Image)resources.GetObject("btnCopy.Image");
+            btnCopy.Location = new Point(559, 187);
+            btnCopy.Name = "btnCopy";
+            btnCopy.Size = new Size(99, 36);
+            btnCopy.TabIndex = 8;
+            btnCopy.UseVisualStyleBackColor = false;
+            btnCopy.Click += btnCopy_Click;
+            // 
+            // btnCreate
+            // 
+            btnCreate.BackColor = Color.FromArgb(128, 255, 128);
+            btnCreate.Image = (Image)resources.GetObject("btnCreate.Image");
+            btnCreate.Location = new Point(559, 68);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(99, 35);
+            btnCreate.TabIndex = 9;
+            btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.Click += btnCreate_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = Color.DarkGray;
+            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
+            btnDelete.Location = new Point(559, 324);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(99, 36);
+            btnDelete.TabIndex = 10;
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnSystemBack
+            // 
+            btnSystemBack.Location = new Point(177, 17);
+            btnSystemBack.Name = "btnSystemBack";
+            btnSystemBack.Size = new Size(75, 23);
+            btnSystemBack.TabIndex = 11;
+            btnSystemBack.Text = "Back";
+            btnSystemBack.UseVisualStyleBackColor = true;
+            btnSystemBack.Click += btnSystemBack_Click;
+            // 
+            // btnStorageBack
+            // 
+            btnStorageBack.Location = new Point(670, 12);
+            btnStorageBack.Name = "btnStorageBack";
+            btnStorageBack.Size = new Size(75, 23);
+            btnStorageBack.TabIndex = 12;
+            btnStorageBack.Text = "Back";
+            btnStorageBack.UseVisualStyleBackColor = true;
+            btnStorageBack.Click += btnStorageBack_Click;
             // 
             // SecurityUsbForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(tvDir);
+            ClientSize = new Size(1044, 384);
+            Controls.Add(btnStorageBack);
+            Controls.Add(btnSystemBack);
+            Controls.Add(btnDelete);
+            Controls.Add(btnCreate);
+            Controls.Add(btnCopy);
+            Controls.Add(groupBox2);
             Controls.Add(groupBox1);
-            Controls.Add(dgvFile);
+            Controls.Add(tvDir);
             ForeColor = SystemColors.ActiveCaptionText;
             Name = "SecurityUsbForm";
             Text = "Secure USB";
             Load += SecurityUsbView_Load;
             ((System.ComponentModel.ISupportInitialize)dgvFile).EndInit();
             groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvUsbAT).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private DataGridView dgvFile;
-        private Button btnBrowseFile;
-        private GroupBox groupBox1;
-        private TextBox txtFileName;
-        private TextBox txtFilePath;
-        private TextBox txtFileSize;
-        private Label label1;
-        private Label label2;
-        private Label label4;
-        private TextBox txtExtension;
-        private Label label3;
         private TreeView tvDir;
-        private Label label5;
-        private ComboBox cbFileSizeUnit;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private DataGridView dgvUsbAT;
         private Button btnCopy;
-        private Button btnEncrypt;
-        private Button btnDecrypt;
-        private Button btnOpen;
-        private Label label6;
+        private Button btnCreate;
+        private Button btnDelete;
+        private Button btnSystemBack;
+        private Button btnStorageBack;
     }
 }

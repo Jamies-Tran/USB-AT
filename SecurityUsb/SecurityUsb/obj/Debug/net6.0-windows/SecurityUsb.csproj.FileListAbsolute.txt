@@ -18,3 +18,4 @@ C:\Users\broke\Desktop\usb-at\SecurityUsb\SecurityUsb\obj\Debug\net6.0-windows\S
 C:\Users\broke\Desktop\usb-at\SecurityUsb\SecurityUsb\bin\Debug\net6.0-windows\Microsoft.Data.Sqlite.dll
 C:\Users\broke\Desktop\usb-at\SecurityUsb\SecurityUsb\bin\Debug\net6.0-windows\SQLitePCLRaw.core.dll
 C:\Users\broke\Desktop\usb-at\SecurityUsb\SecurityUsb\obj\Debug\net6.0-windows\SecurityUsb.csproj.CopyComplete
+C:\Users\broke\Desktop\usb-at\SecurityUsb\SecurityUsb\obj\Debug\net6.0-windows\SecurityUsb.Properties.Resources.resources
